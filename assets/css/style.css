@@ -1,0 +1,874 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/*VARIABLES*/
+:root {
+  --primary-green: #4fab4c; /*Verde*/
+  /*--secondary-black: #974833; /*Marrón*/
+  --secondary-black: #000000; /*Negro*/
+}
+
+/* ------ GENERAL ------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000000;
+  background-image: url("../images/Wallpaper.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+  /*background-color: beige;*/
+}
+
+h1,
+h2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+h2::after {
+  content: " ";
+  background: var(--primary-green);
+  display: block;
+  width: 80px;
+  height: 4px;
+  bottom: 0;
+  margin: 0 auto 0 auto;
+  text-decoration: underline;
+}
+
+.section-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.section-description p {
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+/* ------ HEADER ------*/
+nav {
+  width: 100%;
+  background-color: #000000;
+  position: fixed;
+  z-index: 100;
+  border-bottom: 3px solid var(--primary-green);
+}
+
+#relleno {
+  width: 100%;
+  height: 90px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  /*border: 3px solid yellow;*/
+}
+
+.menu-logo {
+  width: 138px;
+  height: 90px;
+}
+
+.header-logo {
+  width: 100%;
+  height: 100%;
+  /*border: 3px solid yellow;*/
+}
+
+.menu-nav__bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 20px;
+  /*justify-content: space-between;*/
+
+  /*flex-direction: row;*/
+  /*flex-wrap: wrap;*/
+}
+
+/*-- BOTONES DE LA BARRA DE NAVEGACIÓN --*/
+.menu-nav__bar li {
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  margin-right: 15px;
+  /*padding-left: 12px;*/
+  list-style: none;
+}
+
+.menu-nav__bar a {
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.menu-nav__bar a:hover,
+.menu-nav__bar li:active {
+  border-radius: 3px;
+  background: var(--primary-green);
+}
+
+.active {
+  background-color: var(--primary-green);
+  border-radius: 3px;
+}
+
+/*Menú Hamburguesa*/
+/*#menu_mobile {
+  display: none;
+  width: 80px;
+  height: 80px;
+}*/
+
+.index-portada {
+  padding-bottom: 10px;
+}
+
+.index-portada img {
+  width: 100%;
+}
+
+/* ------ FOOTER ------*/
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #000;
+  border-bottom: 3px solid var(--primary-green);
+}
+
+.footer-contact h4,
+.footer-menu h4,
+.footer-redes-sociales h4 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 8px;
+}
+
+/* -- footer de contacto (izq) -- */
+.footer-contact p {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+.footer-contact p > strong {
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+/* -- footer de menu (centro) -- */
+.footer-menu {
+  /*background-color: orange;*/
+  padding: 0 10px 0;
+}
+
+.footer-menu ul {
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  /*padding: 0 10px 0;*/
+  /*border: 1px solid cyan;*/
+}
+
+.footer-menu li {
+  padding: 10px;
+  margin-left: 90px;
+}
+
+.footer-menu a {
+  /*color: var(--secondary-black);*/
+  color: #ffffff;
+  text-decoration: none;
+  /*font-weight: 600;*/
+  padding: 10px 10px;
+  border-radius: 3px;
+}
+
+.footer-menu a:hover {
+  color: #ffffff;
+  background-color: var(--primary-green);
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.social-links img:hover {
+  /*Grados de rotación de los íconos*/
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+
+  /*Velocidad de rotación de los íconos*/
+  transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+  -moz-transition: 1s all ease;
+  -o-transition: 1s all ease;
+  -ms-transition: 1s all ease;
+}
+
+/* -- footer copyright -- */
+.footer-copyright {
+  background-color: #000000;
+  height: 40px;
+  color: #ffffff;
+  padding: 4px;
+  text-align: center;
+}
+/*------------------------------------------------------------------*/
+
+/* ------ SECTION INDEX ------ */
+
+.index-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* -- Noticias -- */
+.news-container {
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.news {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  background-color: beige;
+  /*padding: 0 0 10px 10px;*/
+  /*justify-content: space-between;*/
+
+  border: 3px solid var(--primary-green);
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.news-photo {
+  width: 30%;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
+.news-photo img {
+  width: 100%;
+  height: 200px;
+}
+
+.news-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 70%;
+  padding-left: 10px;
+  /*border: 1px solid olive;*/
+}
+
+.news-description h3 {
+  padding-bottom: 6px;
+}
+
+.news-description a {
+  text-decoration: none;
+  color: var(--secondary-black);
+  font-weight: bold;
+}
+
+/* -- Publicidad -- */
+.publicidad-container {
+  padding-right: 10px;
+  padding-top: 22px;
+}
+
+.publicidad {
+  padding-bottom: 12px;
+}
+
+.publicidad img {
+  border: 3px solid var(--primary-green);
+  border-radius: 6px;
+  width: 360px;
+  height: 300px;
+  box-shadow: 3px 3px 6px 2px black;
+}
+/*------------------------------------------------------------------*/
+
+/* ------ SECTION NOSOTROS ------ */
+
+.container-nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 300px;
+}
+
+.nosotros-team {
+  margin: 10px;
+  background-color: beige;
+  border-radius: 6px;
+}
+
+.nosotros-team img {
+  width: auto;
+  height: auto;
+  max-width: 350px;
+  max-height: 350px;
+  border: 3px solid var(--primary-green);
+  border-radius: 6px;
+}
+
+.nosotros-team__info h3,
+.nosotros-team__info p {
+  text-align: center;
+}
+/*------------------------------------------------------------------*/
+
+/* ------ SECTION TIPOS DE MATE ------ */
+
+.container-tipos_mate {
+  display: grid;
+
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 370px 370px 370px;
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+.tipos_mate {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: beige;
+  border-radius: 6px;
+  padding-bottom: 10px;
+}
+
+.tipos_mate img {
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 300px;
+  border: 3px solid var(--primary-green);
+  border-radius: 6px;
+}
+
+.tipos_mate:hover {
+  transform: scale(1.2); /*Hacemos como un acercamiento (zoom)*/
+}
+
+.tipos_mate h3 {
+  padding-top: 10px;
+  text-align: center;
+}
+/*------------------------------------------------------------------*/
+
+/* ------ SECTION SECRETOS DEL MATE ------ */
+
+.container-secretos_mate {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secretos_mate {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; /*Alineamos los items al centro-vertical*/
+
+  margin: 10px;
+  border: 3px solid var(--primary-green);
+  background-color: beige;
+  border-radius: 6px;
+  width: 80%;
+  /*height: 340px;*/
+}
+
+.description-secretos_mate {
+  /*border: 1px solid red;*/
+  width: 50%;
+}
+
+.description-secretos_mate h3 {
+  text-align: left;
+  color: var(--primary-green);
+}
+
+.description-secretos_mate p {
+  padding-bottom: 10px;
+}
+
+.description-secretos_mate span {
+  font-weight: 600;
+}
+
+.description-secretos_mate ul {
+  padding-left: 16px;
+}
+
+.description-secretos_mate li {
+  padding-bottom: 3px;
+}
+
+.video-secretos_mate {
+  padding-top: 4px;
+}
+
+/*------------------------------------------------------------------*/
+
+/* ------ SECTION CONTACTOS ------ */
+
+/* ------ Información de Contacto ------ */
+.container-contact {
+  /*background-color: greenyellow;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+
+/* -- Datos de contacto --*/
+.info-contact {
+  background-color: beige;
+  border-top: 3px solid var(--primary-green);
+  border-radius: 6px;
+  width: 40%;
+  height: 667px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 6px 2px black;
+}
+
+.info-group {
+  padding: 10px 10px 10px 10px;
+}
+
+.info-group h3 {
+  color: var(--secondary-black);
+  padding-left: 6px;
+  padding-top: 4px;
+}
+
+.info-group i {
+  padding-right: 2px;
+  float: left;
+}
+
+.info-group p {
+  padding-left: 35px;
+}
+
+.social-network_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.social-network_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+.social-network_info p {
+  display: inline;
+  padding: 10px 10px 10px 4px; /*Top Right Bottom Left*/
+}
+
+.social-network_info a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.info-group img,
+.img-social_network {
+  width: 30px;
+  height: 30px;
+}
+
+.info-map {
+  border: 3px solid var(--primary-green);
+  border-radius: 6px;
+}
+
+.info-map iframe {
+  width: 100%;
+}
+
+/* ------ Formulario de Contacto ------ */
+.container-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: beige;
+  border-top: 3px solid var(--primary-green);
+  border-radius: 6px;
+  width: 696px;
+  height: 667px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 6px 2px black;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}
+
+/* Contenedor de todos los campos */
+.form-fields {
+  display: grid;
+
+  grid-template-columns: 348px 348px;
+  grid-template-rows: 60px 60px 200px 60px;
+
+  grid-template-areas:
+    "nombre telefono"
+    "mail asunto"
+    "mensaje mensaje"
+    "botones botones";
+
+  justify-items: center;
+  padding-top: 13px;
+}
+
+.name {
+  grid-area: nombre;
+  height: 50%;
+  width: 318px;
+}
+
+.phone {
+  grid-area: telefono;
+  height: 50%;
+  width: 318px;
+}
+
+.email {
+  grid-area: mail;
+  height: 50%;
+  width: 318px;
+}
+
+.subject {
+  grid-area: asunto;
+  height: 50%;
+  width: 318px;
+}
+
+.message {
+  grid-area: mensaje;
+  width: 664px;
+  padding-top: 6px;
+}
+
+.buttons {
+  grid-area: botones;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-control input,
+.form-control select {
+  border: 1px solid var(--secondary-black);
+  border-radius: 3px;
+  font-size: 16px;
+  height: 40px;
+  width: 318px;
+  padding-left: 5px;
+}
+
+.form-control input:focus,
+.form-control select:focus,
+.form-control TextArea:focus {
+  outline: none;
+  border: 2px solid var(--secondary-black);
+  background-color: #f7f7f7;
+}
+
+.form-control TextArea {
+  border: 1px solid var(--secondary-black);
+  border-radius: 3px;
+  width: 664px;
+  /*height: 220px;*/
+  height: auto;
+  font-family: inherit;
+  font-size: 16px;
+  padding-left: 5px;
+  padding-top: 5px;
+  /* resize: vertical; Solo se redimensiona de forma vertical*/
+  resize: none;
+}
+
+/* Botones */
+.form-control > button {
+  width: 120px;
+  height: 36px;
+  font-size: 16px;
+  background-color: var(--primary-green);
+  border: 1px solid var(--secondary-black);
+  border-radius: 3px;
+  margin: 0 10px 20px 10px;
+  color: #ffffff;
+  font-weight: bolder;
+  border: none;
+}
+
+.form-control > button:hover {
+  opacity: 0.7;
+}
+/*------------------------------------------------------------------*/
+
+/* ------ RESPONSIVE ------ */
+
+@media screen and (max-width: 1400px) {
+  /* ****** Section Index ****** */
+  .publicidad-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .publicidad {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .news {
+    margin-top: 10px;
+  }
+  /*----------------------------------*/
+
+  /* ****** Tipos de Mate ****** */
+
+  .container-tipos_mate {
+    grid-template-columns: 300px 300px;
+  }
+  /*----------------------------------*/
+
+  /* ****** Secretos del Mate ****** */
+
+  .secretos_mate {
+    width: 50%;
+  }
+
+  .video-secretos_mate {
+    width: 95%;
+  }
+
+  .video-secretos_mate iframe {
+    width: 100%;
+  }
+  /*----------------------------------*/
+}
+
+@media screen and (max-width: 1200px) {
+  /* ****** Section Index ****** */
+  .index-container {
+    justify-content: center;
+  }
+
+  .publicidad {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .news-container {
+    padding-left: 20px;
+  }
+
+  .news {
+    margin-top: 10px;
+  }
+  /*----------------------------------*/
+
+  /* ****** Section Contacto ****** */
+  .info-contact {
+    width: 90%;
+    height: 60%;
+  }
+  .container-form {
+    width: 90%;
+  }
+  /*----------------------------------*/
+}
+
+@media screen and (max-width: 1160px) {
+  /* ****** Section Contacto ****** */
+  .form-fields,
+  .form-control {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .form-control {
+    padding: 10px 0;
+  }
+
+  .form-control input,
+  .form-control select,
+  .name,
+  .phone,
+  .email,
+  .subject {
+    width: 90%;
+  }
+
+  .form-control TextArea,
+  .message {
+    width: 90%;
+    padding-top: 13px;
+  }
+  /*----------------------------------*/
+}
+
+@media screen and (max-width: 992px) {
+  /*
+  .menu-nav__bar {
+    display: none;
+  }*/
+
+  #relleno {
+    width: 100%;
+    height: 170px;
+  }
+
+  /* ****** Menú de Navegación ****** */
+  .menu-nav__bar ul {
+    /*display: none;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-nav__bar ul > li {
+    padding-top: 10px;
+  }
+
+  /*Menú Hamburguesa*/
+  /*#menu_mobile {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }*/
+  /*----------------------------------*/
+
+  /* ****** Footer ****** */
+  .footer-container {
+    justify-content: flex-start;
+  }
+  /*----------------------------------*/
+
+  /* ****** Section Tipos de Mate ****** */
+  .container-tipos_mate {
+    grid-template-columns: 300px;
+  }
+  /*----------------------------------*/
+}
+
+@media screen and (max-width: 768px) {
+  /* ****** Section Index ****** */
+  .social-links {
+    /*padding-left: 25%;*/
+    padding-left: 35%;
+    padding-bottom: 10px;
+  }
+  .index-container {
+    justify-content: center;
+  }
+
+  .publicidad-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .news-photo img {
+    height: 120px;
+  }
+  /*----------------------------------*/
+
+  /* ****** Footer ****** */
+  .footer-container {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  /*----------------------------------*/
+
+  /* ****** Section Nosotros ****** */
+  .container-nosotros {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  /*----------------------------------*/
+}
+
+@media screen and (max-width: 576px) {
+  /* ****** Section Nosotros ****** */
+  .nosotros-team {
+    margin: 5px;
+  }
+  /*----------------------------------*/
+
+  /* ****** Section Tipos de Mate ****** */
+  .container-tipos_mate {
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(9, 370px);
+  }
+
+  .tipos_mate img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  /*----------------------------------*/
+}
