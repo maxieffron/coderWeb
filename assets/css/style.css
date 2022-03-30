@@ -313,7 +313,7 @@ nav {
 
 /* -- Publicidad -- */
 .publicidad-container {
-  padding-right: 10px;
+  padding-right: 22px;
   padding-top: 22px;
 }
 
@@ -392,9 +392,10 @@ nav {
   border-radius: 6px;
 }
 
+/*
 .tipos_mate:hover {
-  transform: scale(1.2); /*Hacemos como un acercamiento (zoom)*/
-}
+  transform: scale(1.2); /*Hacemos como un acercamiento (zoom)
+}*/
 
 .tipos_mate h3 {
   padding-top: 10px;
@@ -693,7 +694,7 @@ form {
   /* ****** Secretos del Mate ****** */
 
   .secretos_mate {
-    width: 50%;
+    width: 90%;
   }
 
   .video-secretos_mate {
