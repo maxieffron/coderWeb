@@ -4,6 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  line-height: normal;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -29,6 +30,10 @@ body {
   /*background-color: beige;*/
 }
 
+main {
+  padding-top: 92px;
+}
+
 h1,
 h2 {
   padding-top: 15px;
@@ -36,6 +41,16 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 h2::after {
@@ -47,6 +62,35 @@ h2::after {
   bottom: 0;
   margin: 0 auto 0 auto;
   text-decoration: underline;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+ul,
+ol {
+  margin: 0;
 }
 
 .section-description {
@@ -194,12 +238,12 @@ nav {
   text-align: left;
   list-style: none;
   margin: 0;
-  /*padding: 0 10px 0;*/
+  padding: 0 10px 0;
   /*border: 1px solid cyan;*/
 }
 
 .footer-menu li {
-  padding: 10px;
+  padding: 6px;
   margin-left: 90px;
 }
 
@@ -349,7 +393,8 @@ nav {
 .nosotros-team img {
   width: auto;
   height: auto;
-  max-width: 350px;
+  /*max-width: 350px;*/
+  max-width: 250px;
   max-height: 350px;
   border: 3px solid var(--primary-green);
   border-radius: 6px;
@@ -607,13 +652,13 @@ form {
 
 .buttons {
   grid-area: botones;
-  padding-top: 20px;
+  padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.form-control input,
-.form-control select {
+.form-control_field input,
+.form-control_field select {
   border: 1px solid var(--secondary-black);
   border-radius: 3px;
   font-size: 16px;
@@ -622,15 +667,15 @@ form {
   padding-left: 5px;
 }
 
-.form-control input:focus,
-.form-control select:focus,
-.form-control TextArea:focus {
+.form-control_field input:focus,
+.form-control_field select:focus,
+.form-control_field TextArea:focus {
   outline: none;
   border: 2px solid var(--secondary-black);
   background-color: #f7f7f7;
 }
 
-.form-control TextArea {
+.form-control_field TextArea {
   border: 1px solid var(--secondary-black);
   border-radius: 3px;
   width: 664px;
@@ -645,7 +690,7 @@ form {
 }
 
 /* Botones */
-.form-control > button {
+.form-control_field > button {
   width: 120px;
   height: 36px;
   font-size: 16px;
@@ -658,7 +703,7 @@ form {
   border: none;
 }
 
-.form-control > button:hover {
+.form-control_field > button:hover {
   opacity: 0.7;
 }
 /*------------------------------------------------------------------*/
@@ -681,13 +726,6 @@ form {
 
   .news {
     margin-top: 10px;
-  }
-  /*----------------------------------*/
-
-  /* ****** Tipos de Mate ****** */
-
-  .container-tipos_mate {
-    grid-template-columns: 300px 300px;
   }
   /*----------------------------------*/
 
@@ -728,6 +766,13 @@ form {
   }
   /*----------------------------------*/
 
+  /* ****** Tipos de Mate ****** */
+
+  .container-tipos_mate {
+    grid-template-columns: 300px 300px;
+  }
+  /*----------------------------------*/
+
   /* ****** Section Contacto ****** */
   .info-contact {
     width: 90%;
@@ -742,19 +787,19 @@ form {
 @media screen and (max-width: 1160px) {
   /* ****** Section Contacto ****** */
   .form-fields,
-  .form-control {
+  .form-control_field {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
-  .form-control {
+  .form-control_field {
     padding: 10px 0;
   }
 
-  .form-control input,
-  .form-control select,
+  .form-control_field input,
+  .form-control_field select,
   .name,
   .phone,
   .email,
@@ -762,7 +807,7 @@ form {
     width: 90%;
   }
 
-  .form-control TextArea,
+  .form-control_field TextArea,
   .message {
     width: 90%;
     padding-top: 13px;
