@@ -454,35 +454,15 @@ nav {
 
 /* ------ SECTION SECRETOS DEL MATE ------ */
 
-.container-secretos_mate {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-}
-
 .secretos_mate {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center; /*Alineamos los items al centro-vertical*/
-
-  margin: 10px;
   border: 3px solid var(--primary-green);
   background-color: beige;
   border-radius: 6px;
-  width: 80%;
-  /*height: 340px;*/
-}
-
-.description-secretos_mate {
-  /*border: 1px solid red;*/
-  width: 50%;
+  margin-bottom: 20px;
 }
 
 .description-secretos_mate h3 {
-  text-align: left;
+  text-align: center;
   color: var(--primary-green);
 }
 
@@ -504,6 +484,7 @@ nav {
 
 .video-secretos_mate {
   padding-top: 4px;
+  width: 100%;
 }
 
 /*------------------------------------------------------------------*/
@@ -730,21 +711,6 @@ form {
 
   .news {
     margin-top: 10px;
-  }
-  /*----------------------------------*/
-
-  /* ****** Secretos del Mate ****** */
-
-  .secretos_mate {
-    width: 90%;
-  }
-
-  .video-secretos_mate {
-    width: 95%;
-  }
-
-  .video-secretos_mate iframe {
-    width: 100%;
   }
   /*----------------------------------*/
 }
