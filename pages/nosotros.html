@@ -17,38 +17,47 @@
 
       <header>
 
-
-
             <!-- Barra de Navegación-->
-            <nav>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
 
                   <div class="menu-container">
 
 
                         <div class="menu-logo">
-                              <img class="header-logo" src="../assets/images/logo/logo-nuestro_mate.png"
-                                    alt="Logo Hashtag Nuestro Mate">
+                              <img class="header-logo" src="../assets/images/logo/logo-nuestro_mate.png">
                         </div>
 
-                        <div class="menu-nav__bar">
-                              <ul>
-                                    <li>
+                        <div id="burger-menu">
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                              </button>
+                        </div>
+
+
+
+                        <div class="collapse navbar-collapse menu-nav__bar" id="navbarSupportedContent">
+
+
+                              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
                                           <a href="../index.html">Inicio</a>
                                     </li>
 
-                                    <li>
+                                    <li class="nav-item">
                                           <a class="active" href="nosotros.html">Nosotros</a>
                                     </li>
 
-                                    <li>
+                                    <li class="nav-item">
                                           <a href="tipos-de-mate.html">Tipos de mate</a>
                                     </li>
 
-                                    <li>
+                                    <li class="nav-item">
                                           <a href="secretos-del-mate.html">Secretos del mate</a>
                                     </li>
 
-                                    <li>
+                                    <li class="nav-item">
                                           <a href="contacto.html">Contacto</a>
                                     </li>
                               </ul>
