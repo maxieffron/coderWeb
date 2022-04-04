@@ -330,7 +330,7 @@ nav {
 }
 
 .news-photo {
-  width: 30%;
+  /*width: 30%;*/
   padding-top: 4px;
   padding-left: 4px;
 }
@@ -706,7 +706,7 @@ form {
   .publicidad {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
   }
 
   .news {
@@ -724,7 +724,11 @@ form {
   .publicidad {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
+  }
+
+  .publicidad img {
+    width: 100%;
   }
 
   .news-container {
@@ -786,30 +790,27 @@ form {
 }
 
 @media screen and (max-width: 992px) {
-  #relleno {
-    width: 100%;
-    height: 170px;
-  }
-
   /* ****** Menú de Navegación ****** */
-  /* Se comenta temporalmente 
-  .menu-nav__bar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }*/
-
   .menu-nav__bar ul > li {
     padding-top: 16px;
     margin: auto;
   }
 
-  /*Menú Hamburguesa*/
-  /*#menu_mobile {
-    display: block;
-    width: 100px;
-    height: 100px;
-  }*/
+  /* ****** Section Index ****** */
+
+  .news-photo img {
+    height: 117px;
+  }
+
+  .publicidad {
+    padding-left: 20px;
+  }
+
+  .publicidad img {
+    height: 192px;
+    width: 246px;
+  }
+
   /*----------------------------------*/
 
   /* ****** Footer ****** */
@@ -836,15 +837,19 @@ form {
     justify-content: center;
   }
 
+  /*
   .publicidad-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
+  */
 
   .news-photo img {
-    height: 120px;
+    height: auto;
+    margin-left: 4px;
+    padding-bottom: 10px;
   }
   /*----------------------------------*/
 
