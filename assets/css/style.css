@@ -315,18 +315,18 @@ nav {
 }
 
 .news {
+  /*
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 10px;
-  background-color: beige;
+  flex-wrap: wrap;
   /*padding: 0 0 10px 10px;*/
   /*justify-content: space-between;*/
-
+  margin-bottom: 10px;
+  background-color: beige;
   border: 3px solid var(--primary-green);
   border-radius: 5px;
-  flex-wrap: wrap;
 }
 
 .news-photo {
