@@ -1,5 +1,11 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+//Colores Principales
+$primary-color: #4fab4c; //Verde
+$secondary-color: #000000; //Negro
+$font-color-primary: #ffffff; //Color de fuente principal (h1 y h2 por ejemplo)
+
+$font-weight-700: 700; //En Negrita
+$font-weight-600: 600; //En Negrita
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +15,15 @@
   line-height: normal;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 /* ------ GENERAL ------ */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: #000000;
+  color: $secondary-color;
   background-image: url("../images/Wallpaper.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
@@ -31,23 +39,23 @@ h2 {
   padding-bottom: 15px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 700;
+  color: $font-color-primary;
+  font-weight: $font-weight-700;
 }
 
 h1 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: $font-weight-700;
 }
 
 h2 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: $font-weight-700;
 }
 
 h2::after {
   content: " ";
-  background: #4fab4c;
+  background: $primary-color;
   display: block;
   width: 80px;
   height: 4px;
@@ -58,7 +66,7 @@ h2::after {
 
 h3 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: $font-weight-700;
 }
 
 h4 {
@@ -90,21 +98,21 @@ ol {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-}
 
-.section-description p {
-  color: #ffffff;
-  text-align: center;
-  padding-bottom: 16px;
+  p {
+    color: $font-color-primary;
+    text-align: center;
+    padding-bottom: 16px;
+  }
 }
 
 /* ------ HEADER ------*/
 nav {
   width: 100%;
-  background-color: #000000;
+  background-color: $secondary-color;
   /*position: fixed;
   z-index: 100;*/
-  border-bottom: 3px solid #4fab4c;
+  border-bottom: 3px solid $primary-color;
 }
 
 .menu-container {
@@ -130,38 +138,40 @@ nav {
   height: 100%;
 }
 
-.menu-nav__bar ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding-right: 20px;
-}
+.menu-nav__bar {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 20px;
+  }
 
-.menu-nav__bar li {
-  margin-right: 15px;
-  list-style: none;
-}
+  li {
+    margin-right: 15px;
+    list-style: none;
 
-.menu-nav__bar li:active {
-  border-radius: 3px;
-  background: #4fab4c;
-}
+    &:active {
+      border-radius: 3px;
+      background: $primary-color;
+    }
+  }
 
-.menu-nav__bar a {
-  padding: 10px;
-  font-size: 16px;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-  text-align: center;
-}
+  a {
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: $font-color-primary;
+    font-weight: $font-weight-600;
+    text-align: center;
 
-.menu-nav__bar a:hover {
-  border-radius: 3px;
-  background: #4fab4c;
+    &:hover {
+      border-radius: 3px;
+      background: $primary-color;
+    }
+  }
 }
 
 .active {
-  background-color: #4fab4c;
+  background-color: $primary-color;
   border-radius: 3px;
 }
 
@@ -173,104 +183,114 @@ nav {
 
 .index-portada {
   padding-bottom: 10px;
-}
 
-.index-portada img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 /* ------ FOOTER ------*/
+
 .footer-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: #000000;
-  border-bottom: 3px solid #4fab4c;
+  background-color: $secondary-color;
+  border-bottom: 3px solid $primary-color;
 }
 
-.footer-contact h4,
-.footer-menu h4,
-.footer-redes-sociales h4 {
-  text-align: center;
-  color: #ffffff;
-  font-weight: 600;
-  padding: 8px;
+.footer-contact,
+.footer-menu,
+.footer-redes-sociales {
+  h4 {
+    text-align: center;
+    color: $font-color-primary;
+    font-weight: $font-weight-600;
+    padding: 8px;
+  }
 }
 
 /* -- footer de contacto (izq) -- */
-.footer-contact p {
-  text-align: left;
-  padding-left: 10px;
-  padding-top: 10px;
-  color: #ffffff;
-}
+.footer-contact {
+  p {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: $font-color-primary;
 
-.footer-contact p > strong {
-  font-weight: 600;
-  color: #4fab4c;
+    > strong {
+      font-weight: $font-weight-600;
+      color: $primary-color;
+    }
+  }
 }
 
 /* -- footer de menu (centro) -- */
 .footer-menu {
   padding: 0 10px 0;
+
+  ul {
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px 0;
+  }
+
+  li {
+    padding: 6px;
+    margin-left: 90px;
+  }
+
+  a {
+    color: $font-color-primary;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+
+    &:hover {
+      //color: $font-color-primary;
+      background-color: $primary-color;
+    }
+  }
 }
 
-.footer-menu ul {
-  text-align: left;
-  list-style: none;
-  margin: 0;
-  padding: 0 10px 0;
-}
+.social-links {
+  img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
 
-.footer-menu li {
-  padding: 6px;
-  margin-left: 90px;
-}
+    &:hover {
+      /*Grados de rotación de los íconos*/
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
 
-.footer-menu a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 10px 10px;
-  border-radius: 3px;
-}
-
-.footer-menu a:hover {
-  background-color: #4fab4c;
-}
-
-.social-links img {
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-}
-
-.social-links img:hover {
-  /*Grados de rotación de los íconos*/
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  /*Velocidad de rotación de los íconos*/
-  transition: 1s all ease;
-  -webkit-transition: 1s all ease;
-  -moz-transition: 1s all ease;
-  -o-transition: 1s all ease;
-  -ms-transition: 1s all ease;
+      /*Velocidad de rotación de los íconos*/
+      transition: 1s all ease;
+      -webkit-transition: 1s all ease;
+      -moz-transition: 1s all ease;
+      -o-transition: 1s all ease;
+      -ms-transition: 1s all ease;
+    }
+  }
 }
 
 /* -- footer copyright -- */
 .footer-copyright {
-  background-color: #000000;
+  background-color: $secondary-color;
   height: 40px;
-  color: #ffffff;
+  color: $font-color-primary;
   padding: 4px;
   text-align: center;
 }
-
 /*------------------------------------------------------------------*/
+
 /* ------ SECTION INDEX ------ */
+
 .index-container {
   display: flex;
   flex-direction: row;
@@ -288,18 +308,18 @@ nav {
 .news {
   margin-bottom: 10px;
   background-color: beige;
-  border: 3px solid #4fab4c;
+  border: 3px solid $primary-color;
   border-radius: 5px;
 }
 
 .news-photo {
   padding-top: 4px;
   padding-left: 4px;
-}
 
-.news-photo img {
-  width: 100%;
-  height: 200px;
+  img {
+    width: 100%;
+    height: 200px;
+  }
 }
 
 .news-description {
@@ -308,16 +328,16 @@ nav {
   flex-wrap: wrap;
   width: 70%;
   padding-left: 10px;
-}
 
-.news-description h3 {
-  padding-bottom: 6px;
-}
+  h3 {
+    padding-bottom: 6px;
+  }
 
-.news-description a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+    font-weight: bold;
+  }
 }
 
 /* -- Publicidad -- */
@@ -328,18 +348,20 @@ nav {
 
 .publicidad {
   padding-bottom: 12px;
-}
 
-.publicidad img {
-  border: 3px solid #4fab4c;
-  border-radius: 6px;
-  width: 360px;
-  height: 300px;
-  box-shadow: 3px 3px 6px 2px black;
+  img {
+    border: 3px solid $primary-color;
+    border-radius: 6px;
+    width: 360px;
+    height: 300px;
+    box-shadow: 3px 3px 6px 2px black;
+  }
 }
 
 /*------------------------------------------------------------------*/
+
 /* ------ SECTION NOSOTROS ------ */
+
 .container-nosotros {
   display: flex;
   flex-wrap: wrap;
@@ -352,26 +374,30 @@ nav {
   margin: 10px;
   background-color: beige;
   border-radius: 6px;
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 350px;
+    border: 3px solid $primary-color;
+    border-radius: 6px;
+  }
 }
 
-.nosotros-team img {
-  width: auto;
-  height: auto;
-  max-width: 250px;
-  max-height: 350px;
-  border: 3px solid #4fab4c;
-  border-radius: 6px;
+.nosotros-team__info {
+  h3,
+  p {
+    text-align: center;
+  }
 }
-
-.nosotros-team__info h3,
-.nosotros-team__info p {
-  text-align: center;
-}
-
 /*------------------------------------------------------------------*/
+
 /* ------ SECTION TIPOS DE MATE ------ */
+
 .container-tipos_mate {
   display: grid;
+
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 370px 370px 370px;
   grid-column-gap: 20px;
@@ -387,54 +413,59 @@ nav {
   background-color: beige;
   border-radius: 6px;
   padding-bottom: 10px;
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border: 3px solid $primary-color;
+    border-radius: 6px;
+  }
+
+  h3 {
+    padding-top: 10px;
+    text-align: center;
+  }
+
   /*
   &:hover {
     transform: scale(1.2); //Hacemos como un acercamiento (zoom)
   }*/
 }
 
-.tipos_mate img {
-  width: auto;
-  height: auto;
-  max-width: 300px;
-  max-height: 300px;
-  border: 3px solid #4fab4c;
-  border-radius: 6px;
-}
-
-.tipos_mate h3 {
-  padding-top: 10px;
-  text-align: center;
-}
-
 /*------------------------------------------------------------------*/
+
 /* ------ SECTION SECRETOS DEL MATE ------ */
+
 .secretos_mate {
-  border: 3px solid #4fab4c;
+  border: 3px solid $primary-color;
   background-color: beige;
   border-radius: 6px;
   margin-bottom: 20px;
 }
 
-.description-secretos_mate h3 {
-  text-align: center;
-  color: #4fab4c;
-}
+.description-secretos_mate {
+  h3 {
+    text-align: center;
+    color: $primary-color;
+  }
 
-.description-secretos_mate p {
-  padding-bottom: 10px;
-}
+  p {
+    padding-bottom: 10px;
+  }
 
-.description-secretos_mate span {
-  font-weight: 600;
-}
+  span {
+    font-weight: $font-weight-600;
+  }
 
-.description-secretos_mate ul {
-  padding-left: 16px;
-}
+  ul {
+    padding-left: 16px;
+  }
 
-.description-secretos_mate li {
-  padding-bottom: 3px;
+  li {
+    padding-bottom: 3px;
+  }
 }
 
 .video-secretos_mate {
@@ -443,7 +474,9 @@ nav {
 }
 
 /*------------------------------------------------------------------*/
+
 /* ------ SECTION CONTACTOS ------ */
+
 /* ------ Información de Contacto ------ */
 .container-contact {
   display: flex;
@@ -456,7 +489,7 @@ nav {
 /* -- Datos de contacto --*/
 .info-contact {
   background-color: beige;
-  border-top: 3px solid #4fab4c;
+  border-top: 3px solid $primary-color;
   border-radius: 6px;
   width: 40%;
   height: 667px;
@@ -466,21 +499,21 @@ nav {
 
 .info-group {
   padding: 10px 10px 10px 10px;
-}
 
-.info-group h3 {
-  color: #000000;
-  padding-left: 6px;
-  padding-top: 4px;
-}
+  h3 {
+    color: $secondary-color;
+    padding-left: 6px;
+    padding-top: 4px;
+  }
 
-.info-group i {
-  padding-right: 2px;
-  float: left;
-}
+  i {
+    padding-right: 2px;
+    float: left;
+  }
 
-.info-group p {
-  padding-left: 35px;
+  p {
+    padding-left: 35px;
+  }
 }
 
 .social-network_container {
@@ -494,36 +527,36 @@ nav {
   flex-direction: row;
   justify-content: flex-start;
   padding-top: 10px;
+
+  p {
+    display: inline;
+    padding: 10px 10px 10px 4px; /*Top Right Bottom Left*/
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
 }
 
-.social-network_info p {
-  display: inline;
-  padding: 10px 10px 10px 4px;
-  /*Top Right Bottom Left*/
+.info-group {
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }
-
-.social-network_info a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.info-group img {
-  width: 30px;
-  height: 30px;
-}
-
 .img-social_network {
   width: 30px;
   height: 30px;
 }
 
 .info-map {
-  border: 3px solid #4fab4c;
+  border: 3px solid $primary-color;
   border-radius: 6px;
-}
 
-.info-map iframe {
-  width: 100%;
+  iframe {
+    width: 100%;
+  }
 }
 
 /* ------ Formulario de Contacto ------ */
@@ -532,7 +565,7 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: beige;
-  border-top: 3px solid #4fab4c;
+  border-top: 3px solid $primary-color;
   border-radius: 6px;
   width: 696px;
   height: 667px;
@@ -548,9 +581,16 @@ form {
 /* Contenedor de todos los campos */
 .form-fields {
   display: grid;
+
   grid-template-columns: 348px 348px;
   grid-template-rows: 60px 60px 200px 60px;
-  grid-template-areas: "nombre telefono" "mail asunto" "mensaje mensaje" "botones botones";
+
+  grid-template-areas:
+    "nombre telefono"
+    "mail asunto"
+    "mensaje mensaje"
+    "botones botones";
+
   justify-items: center;
   padding-top: 13px;
 }
@@ -592,55 +632,61 @@ form {
   flex-wrap: wrap;
 }
 
-.form-control_field input,
-.form-control_field select {
-  border: 1px solid #000000;
-  border-radius: 3px;
-  font-size: 16px;
-  height: 40px;
-  width: 318px;
-  padding-left: 5px;
-}
+.form-control_field {
+  input,
+  select {
+    border: 1px solid $secondary-color;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 40px;
+    width: 318px;
+    padding-left: 5px;
+  }
 
-.form-control_field input:focus,
-.form-control_field select:focus,
-.form-control_field TextArea:focus {
-  outline: none;
-  border: 2px solid #000000;
-  background-color: #f7f7f7;
-}
+  input,
+  select,
+  TextArea {
+    &:focus {
+      outline: none;
+      border: 2px solid $secondary-color;
+      background-color: #f7f7f7;
+    }
+  }
 
-.form-control_field TextArea {
-  border: 1px solid #000000;
-  border-radius: 3px;
-  width: 664px;
-  height: auto;
-  font-family: inherit;
-  font-size: 16px;
-  padding-left: 5px;
-  padding-top: 5px;
-  resize: none;
-}
+  TextArea {
+    border: 1px solid $secondary-color;
+    border-radius: 3px;
+    width: 664px;
+    height: auto;
+    font-family: inherit;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-top: 5px;
+    resize: none;
+  }
 
-.form-control_field > button {
-  width: 120px;
-  height: 36px;
-  font-size: 16px;
-  background-color: #4fab4c;
-  border: 1px solid #000000;
-  border-radius: 3px;
-  margin: 0 10px 20px 10px;
-  color: #ffffff;
-  font-weight: bolder;
-  border: none;
-}
+  > button {
+    width: 120px;
+    height: 36px;
+    font-size: 16px;
+    background-color: $primary-color;
+    border: 1px solid $secondary-color;
+    border-radius: 3px;
+    margin: 0 10px 20px 10px;
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
 
-.form-control_field > button:hover {
-  opacity: 0.7;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 /*------------------------------------------------------------------*/
+
 /* ------ RESPONSIVE ------ */
+
 @media screen and (max-width: 1400px) {
   /* ****** Section Index ****** */
   .publicidad-container {
@@ -648,10 +694,12 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .publicidad {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
   .news {
     margin-top: 10px;
   }
@@ -663,25 +711,32 @@ form {
   .index-container {
     justify-content: center;
   }
+
   .publicidad {
     padding-top: 10px;
     padding-bottom: 10px;
+
+    img {
+      width: 100%;
+    }
   }
-  .publicidad img {
-    width: 100%;
-  }
+
   .news-container {
     padding-left: 20px;
   }
+
   .news {
     margin-top: 10px;
   }
   /*----------------------------------*/
+
   /* ****** Tipos de Mate ****** */
+
   .container-tipos_mate {
     grid-template-columns: 300px 300px;
   }
   /*----------------------------------*/
+
   /* ****** Section Contacto ****** */
   .info-contact {
     width: 90%;
@@ -702,23 +757,28 @@ form {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+
   .form-control_field {
     padding: 10px 0;
+
+    input,
+    select {
+      width: 90%;
+    }
+
+    TextArea {
+      width: 90%;
+      padding-top: 13px;
+    }
   }
-  .form-control_field input,
-  .form-control_field select {
-    width: 90%;
-  }
-  .form-control_field TextArea {
-    width: 90%;
-    padding-top: 13px;
-  }
+
   .name,
   .phone,
   .email,
   .subject {
     width: 90%;
   }
+
   .message {
     width: 90%;
     padding-top: 13px;
@@ -728,27 +788,38 @@ form {
 
 @media screen and (max-width: 992px) {
   /* ****** Menú de Navegación ****** */
-  .menu-nav__bar ul > li {
-    padding-top: 16px;
-    margin: auto;
+  .menu-nav__bar {
+    ul > li {
+      padding-top: 16px;
+      margin: auto;
+    }
   }
+
   /* ****** Section Index ****** */
-  .news-photo img {
-    height: 117px;
+
+  .news-photo {
+    img {
+      height: 117px;
+    }
   }
+
   .publicidad {
     padding-left: 20px;
+
+    img {
+      height: 192px;
+      width: 246px;
+    }
   }
-  .publicidad img {
-    height: 192px;
-    width: 246px;
-  }
+
   /*----------------------------------*/
+
   /* ****** Footer ****** */
   .footer-container {
     justify-content: flex-start;
   }
   /*----------------------------------*/
+
   /* ****** Section Tipos de Mate ****** */
   .container-tipos_mate {
     grid-template-columns: 300px;
@@ -766,12 +837,16 @@ form {
   .index-container {
     justify-content: center;
   }
-  .news-photo img {
-    height: auto;
-    margin-left: 4px;
-    padding-bottom: 10px;
+
+  .news-photo {
+    img {
+      height: auto;
+      margin-left: 4px;
+      padding-bottom: 10px;
+    }
   }
   /*----------------------------------*/
+
   /* ****** Footer ****** */
   .footer-container {
     display: grid;
@@ -779,6 +854,7 @@ form {
     justify-content: center;
   }
   /*----------------------------------*/
+
   /* ****** Section Nosotros ****** */
   .container-nosotros {
     flex-direction: column;
@@ -794,15 +870,18 @@ form {
     margin: 5px;
   }
   /*----------------------------------*/
+
   /* ****** Section Tipos de Mate ****** */
   .container-tipos_mate {
     grid-template-columns: 300px;
     grid-template-rows: repeat(9, 370px);
   }
-  .tipos_mate img {
-    max-width: 300px;
-    max-height: 300px;
+
+  .tipos_mate {
+    img {
+      max-width: 300px;
+      max-height: 300px;
+    }
   }
   /*----------------------------------*/
 }
-/*# sourceMappingURL=style.css.map */
