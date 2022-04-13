@@ -2,7 +2,6 @@
 /* ------ VARIABLES ------*/
 /* ------ MAPS ------*/
 /* ------ MIXIN ------*/
-/* ------ EXTEND ------*/
 /* ------ GENERALES ------*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
@@ -774,7 +773,8 @@ form {
     justify-content: center;
   }
   .news-photo img {
-    height: auto;
+    /*height: auto;*/
+    height: 355px;
     margin-left: 4px;
     padding-bottom: 10px;
   }
