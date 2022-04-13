@@ -1,0 +1,201 @@
+/* ------ RESPONSIVE ------ */
+
+@media screen and (max-width: 1400px) {
+          /* ****** Section Index ****** */
+          .publicidad-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+        
+          .publicidad {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        
+          .news {
+            margin-top: 10px;
+          }
+          /*----------------------------------*/
+        }
+        
+        @media screen and (max-width: 1200px) {
+          /* ****** Section Index ****** */
+          .index-container {
+            justify-content: center;
+          }
+        
+          .publicidad {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        
+            img {
+              width: 100%;
+            }
+          }
+        
+          .news-container {
+            padding-left: 20px;
+          }
+        
+          .news {
+            margin-top: 10px;
+          }
+          /*----------------------------------*/
+        
+          /* ****** Tipos de Mate ****** */
+        
+          .container-tipos_mate {
+            grid-template-columns: 300px 300px;
+          }
+          /*----------------------------------*/
+        
+          /* ****** Section Contacto ****** */
+          .info-contact {
+            width: 90%;
+            height: 60%;
+          }
+          .container-form {
+            width: 90%;
+          }
+          /*----------------------------------*/
+        }
+        
+        @media screen and (max-width: 1160px) {
+          /* ****** Section Contacto ****** */
+          .form-fields,
+          .form-control_field {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+          }
+        
+          .form-control_field {
+            padding: 10px 0;
+        
+            input,
+            select {
+              width: 90%;
+            }
+        
+            TextArea {
+              width: 90%;
+              padding-top: 13px;
+            }
+          }
+        
+          .name,
+          .phone,
+          .email,
+          .subject {
+            width: 90%;
+          }
+        
+          .message {
+            width: 90%;
+            padding-top: 13px;
+          }
+          /*----------------------------------*/
+        }
+        
+        @media screen and (max-width: 992px) {
+          /* ****** Menú de Navegación ****** */
+          .menu-nav__bar {
+            ul > li {
+              padding-top: 16px;
+              margin: auto;
+            }
+          }
+        
+          /* ****** Section Index ****** */
+        
+          .news-photo {
+            img {
+              height: 117px;
+            }
+          }
+        
+          .publicidad {
+            padding-left: 20px;
+        
+            img {
+              height: 192px;
+              width: 246px;
+            }
+          }
+        
+          /*----------------------------------*/
+        
+          /* ****** Footer ****** */
+          .footer-container {
+            justify-content: flex-start;
+          }
+          /*----------------------------------*/
+        
+          /* ****** Section Tipos de Mate ****** */
+          .container-tipos_mate {
+            grid-template-columns: 300px;
+          }
+          /*----------------------------------*/
+        }
+        
+        @media screen and (max-width: 768px) {
+          /* ****** Section Index ****** */
+          .social-links {
+            /*padding-left: 25%;*/
+            padding-left: 35%;
+            padding-bottom: 10px;
+          }
+          .index-container {
+            justify-content: center;
+          }
+        
+          .news-photo {
+            img {
+              height: auto;
+              margin-left: 4px;
+              padding-bottom: 10px;
+            }
+          }
+          /*----------------------------------*/
+        
+          /* ****** Footer ****** */
+          .footer-container {
+            display: grid;
+            grid-gap: 20px;
+            justify-content: center;
+          }
+          /*----------------------------------*/
+        
+          /* ****** Section Nosotros ****** */
+          .container-nosotros {
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 0;
+          }
+          /*----------------------------------*/
+        }
+        
+        @media screen and (max-width: 576px) {
+          /* ****** Section Nosotros ****** */
+          .nosotros-team {
+            margin: 5px;
+          }
+          /*----------------------------------*/
+        
+          /* ****** Section Tipos de Mate ****** */
+          .container-tipos_mate {
+            grid-template-columns: 300px;
+            grid-template-rows: repeat(9, 370px);
+          }
+        
+          .tipos_mate {
+            img {
+              max-width: 300px;
+              max-height: 300px;
+            }
+          }
+          /*----------------------------------*/
+        }
+        /*----------------------------------------------------------------------------------*/

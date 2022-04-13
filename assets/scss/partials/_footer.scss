@@ -1,0 +1,108 @@
+
+//Colores Principales
+$primary-color: #4fab4c; //Verde
+$secondary-color: #000000; //Negro
+$font-color-primary: #ffffff; //Color de fuente principal (h1 y h2 por ejemplo)
+
+$font-weight-700: 700; //En Negrita
+$font-weight-600: 600; //En Negrita
+
+/* ------ FOOTER ------*/
+
+.footer-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      background-color: $secondary-color;
+      border-bottom: 3px solid $primary-color;
+    }
+    
+    .footer-contact,
+    .footer-menu,
+    .footer-redes-sociales {
+      h4 {
+        text-align: center;
+        color: $font-color-primary;
+        font-weight: $font-weight-600;
+        padding: 8px;
+      }
+    }
+    
+    /* -- footer de contacto (izq) -- */
+    .footer-contact {
+      p {
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 10px;
+        color: $font-color-primary;
+    
+        > strong {
+          font-weight: $font-weight-600;
+          color: $primary-color;
+        }
+      }
+    }
+    
+    /* -- footer de menu (centro) -- */
+    .footer-menu {
+      padding: 0 10px 0;
+    
+      ul {
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        padding: 0 10px 0;
+      }
+    
+      li {
+        padding: 6px;
+        margin-left: 90px;
+      }
+    
+      a {
+        color: $font-color-primary;
+        text-decoration: none;
+        padding: 10px 10px;
+        border-radius: 3px;
+    
+        &:hover {
+          //color: $font-color-primary;
+          background-color: $primary-color;
+        }
+      }
+    }
+    
+    .social-links {
+      img {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    
+        &:hover {
+          /*Grados de rotación de los íconos*/
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+    
+          /*Velocidad de rotación de los íconos*/
+          transition: 1s all ease;
+          -webkit-transition: 1s all ease;
+          -moz-transition: 1s all ease;
+          -o-transition: 1s all ease;
+          -ms-transition: 1s all ease;
+        }
+      }
+    }
+    
+    /* -- footer copyright -- */
+    .footer-copyright {
+      background-color: $secondary-color;
+      height: 40px;
+      color: $font-color-primary;
+      padding: 4px;
+      text-align: center;
+    }
+    /*------------------------------------------------------------------*/

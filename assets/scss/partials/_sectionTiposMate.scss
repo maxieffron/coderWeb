@@ -1,0 +1,45 @@
+//Colores Principales
+$primary-color: #4fab4c; //Verde
+
+/* ------ SECTION TIPOS DE MATE ------ */
+
+.container-tipos_mate {
+      display: grid;
+    
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 370px 370px 370px;
+      grid-column-gap: 20px;
+      justify-content: center;
+    }
+    
+    .tipos_mate {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: beige;
+      border-radius: 6px;
+      padding-bottom: 10px;
+    
+      img {
+        width: auto;
+        height: auto;
+        max-width: 300px;
+        max-height: 300px;
+        border: 3px solid $primary-color;
+        border-radius: 6px;
+      }
+    
+      h3 {
+        padding-top: 10px;
+        text-align: center;
+      }
+    
+      /*
+      &:hover {
+        transform: scale(1.2); //Hacemos como un acercamiento (zoom)
+      }*/
+    }
+    
+    /*------------------------------------------------------------------*/

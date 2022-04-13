@@ -1,0 +1,213 @@
+//Colores Principales
+$primary-color: #4fab4c; //Verde
+$secondary-color: #000000; //Negro
+
+/* ------ SECTION CONTACTOS ------ */
+
+/* ------ Información de Contacto ------ */
+.container-contact {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-bottom: 20px;
+    }
+    
+    /* -- Datos de contacto --*/
+    .info-contact {
+      background-color: beige;
+      border-top: 3px solid $primary-color;
+      border-radius: 6px;
+      width: 40%;
+      height: 667px;
+      margin-bottom: 20px;
+      box-shadow: 3px 3px 6px 2px black;
+    }
+    
+    .info-group {
+      padding: 10px 10px 10px 10px;
+    
+      h3 {
+        color: $secondary-color;
+        padding-left: 6px;
+        padding-top: 4px;
+      }
+    
+      i {
+        padding-right: 2px;
+        float: left;
+      }
+    
+      p {
+        padding-left: 35px;
+      }
+    }
+    
+    .social-network_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    
+    .social-network_info {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-top: 10px;
+    
+      p {
+        display: inline;
+        padding: 10px 10px 10px 4px; /*Top Right Bottom Left*/
+      }
+    
+      a {
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+    
+    .info-group {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .img-social_network {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .info-map {
+      border: 3px solid $primary-color;
+      border-radius: 6px;
+    
+      iframe {
+        width: 100%;
+      }
+    }
+    
+    /* ------ Formulario de Contacto ------ */
+    .container-form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: beige;
+      border-top: 3px solid $primary-color;
+      border-radius: 6px;
+      width: 696px;
+      height: 667px;
+      margin-bottom: 20px;
+      box-shadow: 3px 3px 6px 2px black;
+    }
+    
+    form {
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Contenedor de todos los campos */
+    .form-fields {
+      display: grid;
+    
+      grid-template-columns: 348px 348px;
+      grid-template-rows: 60px 60px 200px 60px;
+    
+      grid-template-areas:
+        "nombre telefono"
+        "mail asunto"
+        "mensaje mensaje"
+        "botones botones";
+    
+      justify-items: center;
+      padding-top: 13px;
+    }
+    
+    .name {
+      grid-area: nombre;
+      height: 50%;
+      width: 318px;
+    }
+    
+    .phone {
+      grid-area: telefono;
+      height: 50%;
+      width: 318px;
+    }
+    
+    .email {
+      grid-area: mail;
+      height: 50%;
+      width: 318px;
+    }
+    
+    .subject {
+      grid-area: asunto;
+      height: 50%;
+      width: 318px;
+    }
+    
+    .message {
+      grid-area: mensaje;
+      width: 664px;
+      padding-top: 6px;
+    }
+    
+    .buttons {
+      grid-area: botones;
+      padding-top: 80px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .form-control_field {
+      input,
+      select {
+        border: 1px solid $secondary-color;
+        border-radius: 3px;
+        font-size: 16px;
+        height: 40px;
+        width: 318px;
+        padding-left: 5px;
+      }
+    
+      input,
+      select,
+      TextArea {
+        &:focus {
+          outline: none;
+          border: 2px solid $secondary-color;
+          background-color: #f7f7f7;
+        }
+      }
+    
+      TextArea {
+        border: 1px solid $secondary-color;
+        border-radius: 3px;
+        width: 664px;
+        height: auto;
+        font-family: inherit;
+        font-size: 16px;
+        padding-left: 5px;
+        padding-top: 5px;
+        resize: none;
+      }
+    
+      > button {
+        width: 120px;
+        height: 36px;
+        font-size: 16px;
+        background-color: $primary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 3px;
+        margin: 0 10px 20px 10px;
+        color: #ffffff;
+        font-weight: bolder;
+        border: none;
+    
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    
+    /*------------------------------------------------------------------*/
