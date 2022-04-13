@@ -1,13 +1,8 @@
-//Colores Principales
-$primary-color: #4fab4c; //Verde
-$secondary-color: #000000; //Negro
 
 /* ------ SECTION INDEX ------ */
 
 .index-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      @include FlexboxInfo(flex,row,wrap);
       justify-content: space-around;
     }
     
@@ -21,8 +16,8 @@ $secondary-color: #000000; //Negro
     .news {
       margin-bottom: 10px;
       background-color: beige;
-      border: 3px solid $primary-color;
-      border-radius: 5px;
+      border: map-get($borderPrimary,borderPri);
+      border-radius: map-get($borderPrimary,borderRadiusPri);
     }
     
     .news-photo {
@@ -36,9 +31,7 @@ $secondary-color: #000000; //Negro
     }
     
     .news-description {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      @include FlexboxInfo(flex,column,wrap);
       width: 70%;
       padding-left: 10px;
     
@@ -63,8 +56,8 @@ $secondary-color: #000000; //Negro
       padding-bottom: 12px;
     
       img {
-        border: 3px solid $primary-color;
-        border-radius: 6px;
+        border: map-get($borderPrimary,borderPri);
+        border-radius: map-get($borderPrimary,borderRadiusPri);
         width: 360px;
         height: 300px;
         box-shadow: 3px 3px 6px 2px black;

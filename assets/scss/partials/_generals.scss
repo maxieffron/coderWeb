@@ -1,13 +1,4 @@
 
-//Colores Principales
-$primary-color: #4fab4c; //Verde
-$secondary-color: #000000; //Negro
-$font-color-primary: #ffffff; //Color de fuente principal (h1 y h2 por ejemplo)
-
-$font-weight-700: 700; //En Negrita
-$font-weight-600: 600; //En Negrita
-
-
 /* ------ GENERALES ------*/
 
 * {
@@ -39,22 +30,20 @@ $font-weight-600: 600; //En Negrita
         
         h1,
         h2 {
-          padding-top: 25px;
-          padding-bottom: 15px;
-          text-align: center;
-          text-transform: uppercase;
-          color: $font-color-primary;
-          font-weight: $font-weight-700;
+          padding-top: map-get($titleStyles,paddingT );
+          padding-bottom: map-get($titleStyles,paddingB );
+          text-align: map-get($titleStyles,tAlign );
+          text-transform: map-get($titleStyles,tTransform );
+          color: map-get($titleStyles,tColor);
+          font-weight: map-get($titleStyles,fWeight);
         }
         
         h1 {
           font-size: 32px;
-          font-weight: $font-weight-700;
         }
         
         h2 {
           font-size: 24px;
-          font-weight: $font-weight-700;
         }
         
         h2::after {
@@ -96,3 +85,16 @@ $font-weight-600: 600; //En Negrita
         ol {
           margin: 0;
         }
+
+          /*Descripción de cada página*/
+  .section-description {
+
+    @include FlexboxInfo(flex,column,wrap);
+    align-items: center;
+  
+    p {
+      color: $font-color-primary;
+      text-align: center;
+      padding-bottom: 16px;
+    }
+  }

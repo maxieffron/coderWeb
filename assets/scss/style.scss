@@ -1,4 +1,8 @@
 //Imports
+@import"./partials/variables";
+@import"./partials/mapas";
+@import"./partials/mixin";
+@import"./partials/extend";
 @import"./partials/generals";
 @import"./partials/header";
 @import"./partials/footer";
@@ -9,26 +13,6 @@
 @import"./partials/sectionContactos";
 @import "./partials/mediaQuerys";
 
-
-
-//Colores Principales
-$font-color-primary: #ffffff; //Color de fuente principal (h1 y h2 por ejemplo)
-
-
-
-  /*Descripción de cada página*/
-  .section-description {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  
-    p {
-      color: $font-color-primary;
-      text-align: center;
-      padding-bottom: 16px;
-    }
-  }
 
 
 

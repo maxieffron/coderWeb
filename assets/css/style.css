@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* ------ VARIABLES ------*/
+/* ------ MAPS ------*/
+/* ------ MIXIN ------*/
+/* ------ EXTEND ------*/
 /* ------ GENERALES ------*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
@@ -38,12 +42,10 @@ h2 {
 
 h1 {
   font-size: 32px;
-  font-weight: 700;
 }
 
 h2 {
   font-size: 24px;
-  font-weight: 700;
 }
 
 h2::after {
@@ -84,6 +86,20 @@ img {
 ul,
 ol {
   margin: 0;
+}
+
+/*Descripción de cada página*/
+.section-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.section-description p {
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 16px;
 }
 
 /* ------ HEADER ------*/
@@ -281,7 +297,7 @@ nav {
   margin-bottom: 10px;
   background-color: beige;
   border: 3px solid #4fab4c;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .news-photo {
@@ -334,8 +350,8 @@ nav {
 /* ------ SECTION NOSOTROS ------ */
 .container-nosotros {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 300px;
 }
@@ -403,8 +419,8 @@ nav {
 /* ------ SECTION SECRETOS DEL MATE ------ */
 .secretos_mate {
   border: 3px solid #4fab4c;
-  background-color: beige;
   border-radius: 6px;
+  background-color: beige;
   margin-bottom: 20px;
 }
 
@@ -549,26 +565,26 @@ form {
 
 .name {
   grid-area: nombre;
-  height: 50%;
   width: 318px;
+  height: 50%;
 }
 
 .phone {
   grid-area: telefono;
-  height: 50%;
   width: 318px;
+  height: 50%;
 }
 
 .email {
   grid-area: mail;
-  height: 50%;
   width: 318px;
+  height: 50%;
 }
 
 .subject {
   grid-area: asunto;
-  height: 50%;
   width: 318px;
+  height: 50%;
 }
 
 .message {
@@ -605,10 +621,10 @@ form {
 .form-control_field TextArea {
   border: 1px solid #000000;
   border-radius: 3px;
+  font-size: 16px;
   width: 664px;
   height: auto;
   font-family: inherit;
-  font-size: 16px;
   padding-left: 5px;
   padding-top: 5px;
   resize: none;
@@ -619,7 +635,6 @@ form {
   height: 36px;
   font-size: 16px;
   background-color: #4fab4c;
-  border: 1px solid #000000;
   border-radius: 3px;
   margin: 0 10px 20px 10px;
   color: #ffffff;
@@ -763,6 +778,9 @@ form {
     margin-left: 4px;
     padding-bottom: 10px;
   }
+  .publicidad {
+    padding-left: 0;
+  }
   /*----------------------------------*/
   /* ****** Footer ****** */
   .footer-container {
@@ -799,17 +817,4 @@ form {
 }
 
 /*----------------------------------------------------------------------------------*/
-/*Descripción de cada página*/
-.section-description {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.section-description p {
-  color: #ffffff;
-  text-align: center;
-  padding-bottom: 16px;
-}
 /*# sourceMappingURL=style.css.map */

@@ -1,14 +1,10 @@
-//Colores Principales
-$primary-color: #4fab4c; //Verde
-$secondary-color: #000000; //Negro
 
 /* ------ SECTION CONTACTOS ------ */
 
 /* ------ Información de Contacto ------ */
 .container-contact {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+
+      @include FlexboxInfo(flex,row,wrap);
       justify-content: space-evenly;
       padding-bottom: 20px;
     }
@@ -78,19 +74,18 @@ $secondary-color: #000000; //Negro
     }
     
     .info-map {
-      border: 3px solid $primary-color;
-      border-radius: 6px;
-    
-      iframe {
+      
+      border: map-get($borderPrimary,borderPri);
+      border-radius: map-get($borderPrimary,borderRadiusPri);
+
+       iframe {
         width: 100%;
       }
     }
     
     /* ------ Formulario de Contacto ------ */
     .container-form {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      @include FlexboxInfo(flex,row,wrap);
       background-color: beige;
       border-top: 3px solid $primary-color;
       border-radius: 6px;
@@ -123,30 +118,22 @@ $secondary-color: #000000; //Negro
     }
     
     .name {
-      grid-area: nombre;
-      height: 50%;
-      width: 318px;
+      @include contactFieldSize(nombre,318px,50%);
     }
     
     .phone {
-      grid-area: telefono;
-      height: 50%;
-      width: 318px;
+      @include contactFieldSize(telefono,318px,50%);
     }
     
     .email {
-      grid-area: mail;
-      height: 50%;
-      width: 318px;
+      @include contactFieldSize(mail,318px,50%);
     }
     
     .subject {
-      grid-area: asunto;
-      height: 50%;
-      width: 318px;
+      @include contactFieldSize(asunto,318px,50%);
     }
     
-    .message {
+    .message {  
       grid-area: mensaje;
       width: 664px;
       padding-top: 6px;
@@ -162,8 +149,8 @@ $secondary-color: #000000; //Negro
     .form-control_field {
       input,
       select {
-        border: 1px solid $secondary-color;
-        border-radius: 3px;
+        border: map-get($borderSecondary,borderSec );
+        border-radius: map-get($borderSecondary,borderRadiusSec );
         font-size: 16px;
         height: 40px;
         width: 318px;
@@ -181,12 +168,13 @@ $secondary-color: #000000; //Negro
       }
     
       TextArea {
-        border: 1px solid $secondary-color;
-        border-radius: 3px;
+
+        border: map-get($borderSecondary,borderSec );
+        border-radius: map-get($borderSecondary,borderRadiusSec );
+        font-size: 16px;
         width: 664px;
         height: auto;
         font-family: inherit;
-        font-size: 16px;
         padding-left: 5px;
         padding-top: 5px;
         resize: none;
@@ -197,7 +185,6 @@ $secondary-color: #000000; //Negro
         height: 36px;
         font-size: 16px;
         background-color: $primary-color;
-        border: 1px solid $secondary-color;
         border-radius: 3px;
         margin: 0 10px 20px 10px;
         color: #ffffff;

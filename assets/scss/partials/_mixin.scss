@@ -1,0 +1,18 @@
+
+/* ------ MIXIN ------*/
+
+//Para Flexbox
+@mixin FlexboxInfo($display,$flexDir,$flexWrap) {
+
+    display:$display;
+    flex-direction: $flexDir;
+    flex-wrap: $flexWrap;
+}
+
+//Para los campos del formulario de contacto
+@mixin contactFieldSize($gridArea,$width,$height) {
+    grid-area: $gridArea;
+    width: $width;
+    height: $height;
+
+}

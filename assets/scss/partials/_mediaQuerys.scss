@@ -3,9 +3,7 @@
 @media screen and (max-width: 1400px) {
           /* ****** Section Index ****** */
           .publicidad-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include FlexboxInfo(flex,row,wrap);
           }
         
           .publicidad {
@@ -65,9 +63,7 @@
           /* ****** Section Contacto ****** */
           .form-fields,
           .form-control_field {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include FlexboxInfo(flex,row,wrap);
             justify-content: space-evenly;
           }
         
@@ -157,6 +153,10 @@
               margin-left: 4px;
               padding-bottom: 10px;
             }
+          }
+          
+          .publicidad {
+            padding-left: 0;
           }
           /*----------------------------------*/
         
