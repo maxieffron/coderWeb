@@ -101,6 +101,38 @@ ol {
   padding-bottom: 16px;
 }
 
+/* ------ flecha para volver arriba ------ */
+.back-to-top {
+  position: fixed;
+  display: inline;
+  width: 54px;
+  height: 54px;
+  border-radius: 26px;
+  right: 15px;
+  bottom: 30px;
+  background: #4fab4c;
+  /*color: $font-color-primary;*/
+  transition: display 0.5s ease-in-out;
+  z-index: 994;
+}
+
+.back-to-top i {
+  font-size: 30px;
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  /*
+    &:hover {
+      color:$font-color-primary;
+      transition: background 0.2s ease-in-out;
+    }
+    */
+}
+
+.arrow-up {
+  height: 40px;
+}
+
 /* ------ HEADER ------*/
 nav {
   width: 100%;
@@ -395,10 +427,6 @@ nav {
   background-color: beige;
   border-radius: 6px;
   padding-bottom: 10px;
-  /*
-      &:hover {
-        transform: scale(1.2); //Hacemos como un acercamiento (zoom)
-      }*/
 }
 
 .tipos_mate img {
@@ -413,6 +441,10 @@ nav {
 .tipos_mate h3 {
   padding-top: 10px;
   text-align: center;
+}
+
+.tipos_mate:hover {
+  transform: scale(1.1);
 }
 
 /*------------------------------------------------------------------*/
