@@ -46,7 +46,7 @@
           font-size: 24px;
         }
         
-        h2::after {
+        h1::after {
           content: " ";
           background: $primary-color;
           display: block;

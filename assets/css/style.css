@@ -47,7 +47,7 @@ h2 {
   font-size: 24px;
 }
 
-h2::after {
+h1::after {
   content: " ";
   background: #4fab4c;
   display: block;
